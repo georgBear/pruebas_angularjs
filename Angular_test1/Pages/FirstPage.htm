@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+</head>
+<body>
+
+    <h1>Title of the First Page</h1>
+
+    <div data-ng-app="" >
+        <div data-ng-init="persons=[{name:'John Smith',city:'Manhattan'}, {name:'John Doe',city:'ZigZag'}, {name:'Jane Doe',city:'Montreal'}]">
+            Name: 
+            <input type="text" data-ng-model="name" /> {{ name }}
+            <br />
+            <ul>
+                <li data-ng-repeat="data in persons | filter: name | orderBy: 'city">{{ data.name }} - {{ data.city }}</li>
+            </ul>
+        </div>    
+    </div>
+
+</body>
+</html>

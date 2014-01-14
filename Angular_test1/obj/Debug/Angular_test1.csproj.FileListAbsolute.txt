@@ -1,0 +1,5 @@
+C:\Users\ATello\Desktop\Jorge\VS_Apps\Angular_test1\Angular_test1\Angular_test1\bin\Angular_test1.dll
+C:\Users\ATello\Desktop\Jorge\VS_Apps\Angular_test1\Angular_test1\Angular_test1\bin\Angular_test1.pdb
+C:\Users\ATello\Desktop\Jorge\VS_Apps\Angular_test1\Angular_test1\Angular_test1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ATello\Desktop\Jorge\VS_Apps\Angular_test1\Angular_test1\Angular_test1\obj\Debug\Angular_test1.dll
+C:\Users\ATello\Desktop\Jorge\VS_Apps\Angular_test1\Angular_test1\Angular_test1\obj\Debug\Angular_test1.pdb
