@@ -58,7 +58,11 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Controllers\FirstController.js" />
     <Content Include="Pages\FirstPage.htm" />
+    <Content Include="Partials\View1.html" />
     <Content Include="Partials\View2.html" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\route.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />

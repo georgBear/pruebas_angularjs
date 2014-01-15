@@ -3,12 +3,12 @@
 var demoApp = angular.module('demoApp', ['ngRoute']);
 
 //Configuring the demoApp module for adding custom routes in order to load partial views
-/*demoApp.config(function ($routeProvider) {
+demoApp.config(function ($routeProvider) {
     $routeProvider
         .when('/',
             {
                 controller: 'SimpleController',
-                templateUrl: 'FirstPage.htm'
+                templateUrl: '../Partials/View1.html'
             })
         .when('/partial1',
             {
@@ -28,7 +28,7 @@ var demoApp = angular.module('demoApp', ['ngRoute']);
         .otherwise({ redirectTo: '/' });
 
 });
-*/
+
 //Creating the controller inside of the just created demoApp module
 var controllers = {};
 controllers.SimpleController = function ($scope) {
@@ -37,7 +37,7 @@ controllers.SimpleController = function ($scope) {
         { name: 'John Doe', city: 'Shanghai' },
         { name: 'Jane Doe', city: 'Montreal' }
     ];
-    alert("Created SimpleController");
+
 };
 
 demoApp.controller(controllers);

@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>With Module Perspective</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+    <script src="../Scripts/angular.js" type="text/javascript"></script>
     <script src="../Controllers/FirstController.js" type="text/javascript"></script>
-    <script src="../Scripts/route.js" type="text/javascript"></script>
+    <script src="../Scripts/angular-route.js" type="text/javascript"></script>
 </head>
 <body data-ng-app="demoApp">
 
@@ -12,16 +12,16 @@
 
         <div ng-view="">
         </div>    
-        
+
     <ul>
         <li data-ng-repeat="data in persons">{{ data.name }} - La city es: {{ data.city }} </li>
     </ul>    
 
         <div>
             <p>Actions Div:</p>
-            <input type = "button" value="First View" data-ng-click="render_view1()" /> <a href="#/partial1" >View 1</a>  <br />
-            <input type = "button" value="Second View"  data-ng-click="render_view2()" /> <a href="#/partial2" >View 2</a>
-            <input type = "button" value="Same Level" data-ng-click="render_view1()" /> <a href="#/sameLevel" >same Level</a>  <br />
+             <a href="#/partial1" >View 1</a>  <br />
+            <a href="#/partial2" >View 2</a>    <br />
+            <a href="#/sameLevel" >same Level</a>  <br />
         </div>
 </body>
 </html>
