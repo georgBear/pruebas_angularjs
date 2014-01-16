@@ -25,6 +25,16 @@ demoApp.config(function ($routeProvider) {
                 controller: 'SimpleController',
                 templateUrl: 'sameLevel.html'
             })
+        .when('/jugadores',
+            {
+                controller: 'JugadoresController',
+                templateUrl: '../Partials/View3.html'
+            })
+        .when('/buscarJugadores',
+            {
+                controller: 'JugadoresController',
+                templateUrl: '../Partials/View4.html'
+            })
         .otherwise({ redirectTo: '/' });
 
 });
@@ -38,14 +48,37 @@ controllers.SimpleController = function ($scope) {
         { name: 'Jane Doe', city: 'Montreal' }
     ];
 
+    $scope.addPerson = function () {
+        $scope.persons.push({ name: $scope.New.name, city: $scope.New.city });
+        $scope.apply;
+        console.log("Person length is: " + $scope.persons.length);
+        console.log("Person length Added: " + $scope.persons[$scope.persons.length - 1].name + "  -  " + $scope.persons[$scope.persons.length - 1].city);
+    }
+
 };
+
+demoApp.factory("Jugadores", function () {
+    var Jugadores = {};
+    Jugadores.lista = [
+        { name: "Samuel J. Fox", posicion: "Jardinero Central" },
+        { name: "Ramón Orantes", posicion: "Primera Base" },
+        { name: "Manuel Ortiz", posicion: "Short Stop" },
+        { name: "Cuco Herrera", posicion: "Pitcher" },
+          { name: "Juan Rodriguez", posicion: "Segunda Base" }
+    ];
+    return Jugadores;
+});
+
+controllers.JugadoresController = function ($scope, Jugadores) {
+    $scope.jugadores = Jugadores;
+    $scope.addJugador = function () {
+        Jugadores.lista.push({ name: $scope.Nuevo.name, posicion: $scope.Nuevo.posicion });
+        $scope.apply;
+        console.log("Person length is: " + Jugadores.lista.length);
+        console.log("Person length Added: " + Jugadores.lista[Jugadores.lista.length - 1].name + "  -  " + Jugadores.lista[Jugadores.lista.length - 1].posicion);
+    }
+}
 
 demoApp.controller(controllers);
 
-function render_view1() {
-    
-}
 
-function render_view2() {
-
-}

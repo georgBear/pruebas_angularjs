@@ -1,8 +1,8 @@
 ﻿<div>
     <h2>Title of the View1.html Partial View</h2>
-    <p><b>56789324093847238940</b></p>
-
+    <p><b>Escriba un nombre para buscar:</b></p>
+    <input type="text" ng-model="name" /> {{ name }}
     <ul>
-        <li data-ng-repeat="data in persons">{{ data.name }} - La city es: {{ data.city }} </li>
+        <li data-ng-repeat="data in persons | filter:name | orderBy:'city'">{{ data.name }} - La city es: {{ data.city }} </li>
     </ul>
 </div>

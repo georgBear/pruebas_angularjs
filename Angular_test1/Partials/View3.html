@@ -1,0 +1,16 @@
+﻿<div class="container">
+    <h2>Title of the View3.html Partial View</h2>
+    <p><b>Guarde un nuevo registro de un Jugador de Beisbol:</b></p>
+    Nombre: <br />
+    <input type="text" ng-model="Nuevo.name" /> 
+    <br />Posición: <br />
+    <input type="text" ng-model="Nuevo.posicion" /> 
+    <br />
+    <input type="button" value="Guardar" ng-click="addJugador()" />
+    <script type="text/javascript">
+
+        console.log("Person length is: " + $scope.jugadores.lista.length);
+        console.log("Person length Added: " + $scope.jugadores.lista[$scope.jugadores.lista.length - 1].name + "  -  " + $scope.jugadores.lista[$scope.jugadores.lista.length - 1].posicion);
+
+    </script>
+</div>

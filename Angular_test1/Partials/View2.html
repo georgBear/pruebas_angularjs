@@ -1,4 +1,16 @@
 ﻿<div class="container">
     <h2>Title of the View2.html Partial View</h2>
-    <p><b>Waaaaaaaaaaaaaaaaaaaaaaaaa</b></p>
+    <p><b>Escriba un nuevo registro de Persona:</b></p>
+    Nombre: <br />
+    <input type="text" ng-model="New.name" /> 
+    <br />City: <br />
+    <input type="text" ng-model="New.city" /> 
+    <br />
+    <input type="button" value="Guardar" ng-click="addPerson()" />
+    <script type="text/javascript">
+
+        console.log("Person length is: " + $scope.persons.length);
+        console.log("Person length Added: " + $scope.persons[$scope.persons.length - 1].name + "  -  " + $scope.persons[$scope.persons.length - 1].city);
+
+    </script>
 </div>

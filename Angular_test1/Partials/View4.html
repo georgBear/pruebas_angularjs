@@ -1,0 +1,9 @@
+﻿<div ng-controller="JugadoresController">
+    <h2>Title of the View4.html Partial View</h2>
+    <h3>Buscar Jugadores</h3>
+    <p><b>Escriba un nombre para buscar un jugador:</b></p>
+    <input type="text" ng-model="name" /> {{ name }}
+    <ul>
+        <li data-ng-repeat="data in jugadores.lista | filter:name | orderBy:'posicion'">{{ data.name }} es: {{ data.posicion }} </li>
+    </ul>
+</div>
